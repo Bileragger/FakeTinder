@@ -77,15 +77,15 @@
 <body>
   <div class="header">Tinder</div>
   <div class="profile-pic"></div>
-  <div id="message" class="message">Happy Birthday 🎁 Here is you gift! Your friends want you to start having fun and meeting new people! Are you excited? Start now!</div>
-  <button id="redeemButton" class="redeem-button">Find your prince!</button>
+  <div id="message" class="message">Happy Birthday Luisa 🎁 Here is your gift! Your friends want you to start having fun and meeting new people! Are you excited? Start now!</div>
+  <button id="redeemButton" class="redeem-button">Find your prince 💛</button>
   <button id="resetButton" class="reset-button" style="display: none;">Reset Page</button>
   <div class="footer">© 2024 Tinder. All rights reserved.</div>
 
   <script>
     // Check if the button was clicked previously
     if (localStorage.getItem('giftRedeemed')) {
-      document.getElementById('message').innerText = "Surprise! 🎉 You’ve been pranked!";
+      document.getElementById('message').innerText = "Auguri Bucchina! 🎉 Mi spiace, il tuo principe è in un altro castello! Il vero regalo è in arrivo nei prossimi giorni 🚂 (grazie al GENEROSO contributo di Simone, Mery e Ligia)";
       document.getElementById('redeemButton').style.display = 'none';
       document.getElementById('resetButton').style.display = 'inline-block';
     }
