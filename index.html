@@ -30,7 +30,7 @@
       height: 150px;
       border-radius: 50%;
       margin: 20px;
-      background: url('lu.jpg') no-repeat center center;
+      background: url('https://via.placeholder.com/150') no-repeat center center;
       background-size: cover;
       border: 4px solid #ff5864;
     }
@@ -40,7 +40,7 @@
       color: #555;
       margin: 10px 20px;
     }
-    .redeem-button {
+    .redeem-button, .reset-button {
       display: inline-block;
       margin-top: 20px;
       padding: 15px 30px;
@@ -55,9 +55,16 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    .redeem-button:hover {
+    .redeem-button:hover, .reset-button:hover {
       background-color: #e74c57;
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    .reset-button {
+      background-color: #007bff;
+      margin-top: 10px;
+    }
+    .reset-button:hover {
+      background-color: #0056b3;
     }
     .footer {
       position: absolute;
@@ -72,6 +79,7 @@
   <div class="profile-pic"></div>
   <div id="message" class="message">🎁 You have a special gift waiting for you!</div>
   <button id="redeemButton" class="redeem-button">Redeem Your Gift</button>
+  <button id="resetButton" class="reset-button" style="display: none;">Reset Page</button>
   <div class="footer">© 2024 Tinder. All rights reserved.</div>
 
   <script>
@@ -79,19 +87,30 @@
     if (localStorage.getItem('giftRedeemed')) {
       document.getElementById('message').innerText = "Surprise! 🎉 You’ve been pranked!";
       document.getElementById('redeemButton').style.display = 'none';
+      document.getElementById('resetButton').style.display = 'inline-block';
     }
 
     // Button click function
     document.getElementById('redeemButton').onclick = function() {
-      // Store the fact that the button was clicked
+      // Store in localStorage that the button was clicked
       localStorage.setItem('giftRedeemed', 'true');
 
       // Change the message immediately
       document.getElementById('message').innerText = "Surprise! 🎉 You’ve been pranked!";
       document.getElementById('redeemButton').style.display = 'none';
+      document.getElementById('resetButton').style.display = 'inline-block';
 
       // Open YouTube link in a new tab
       window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+    };
+
+    // Reset button function
+    document.getElementById('resetButton').onclick = function() {
+      // Clear the localStorage key
+      localStorage.removeItem('giftRedeemed');
+
+      // Reload the page to reset
+      location.reload();
     };
   </script>
 </body>
