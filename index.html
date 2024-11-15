@@ -30,7 +30,7 @@
       height: 150px;
       border-radius: 50%;
       margin: 20px;
-      background: url('lu.jpg') no-repeat center center;
+      background: url('https://via.placeholder.com/150') no-repeat center center;
       background-size: cover;
       border: 4px solid #ff5864;
     }
@@ -75,19 +75,23 @@
   <div class="footer">© 2024 Tinder. All rights reserved.</div>
 
   <script>
-    // Check if the button was clicked in a previous visit
+    // Check if the button was clicked previously
     if (localStorage.getItem('giftRedeemed')) {
       document.getElementById('message').innerText = "Surprise! 🎉 You’ve been pranked!";
       document.getElementById('redeemButton').style.display = 'none';
     }
 
-    // Function to handle button click
+    // Button click function
     document.getElementById('redeemButton').onclick = function() {
-      // Store in local storage that the button was clicked
+      // Store the fact that the button was clicked
       localStorage.setItem('giftRedeemed', 'true');
 
-      // Redirect to YouTube link
-      window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      // Change the message immediately
+      document.getElementById('message').innerText = "Surprise! 🎉 You’ve been pranked!";
+      document.getElementById('redeemButton').style.display = 'none';
+
+      // Open YouTube link in a new tab
+      window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
     };
   </script>
 </body>
