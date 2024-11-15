@@ -3,37 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auguri Bucchina!</title>
+  <title>Tinder - Gift Notification</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('wallpaper.jpg'); /* Replace with your desired image URL */
-      background-size: cover;
-      background-position: center;
-      text-align: center;
-      color: white;
-      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
-    h1 {
-      margin-top: 20%;
-      font-size: 3rem;
-      text-shadow: 2px 2px 4px #000;
+    .header {
+      width: 100%;
+      padding: 15px;
+      background-color: #ff5864;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 20px;
+      background: url('https://via.placeholder.com/150') no-repeat center center;
+      background-size: cover;
+      border: 4px solid #ff5864;
+    }
+    .message {
+      text-align: center;
+      font-size: 20px;
+      color: #555;
+      margin: 10px 20px;
+    }
+    .redeem-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: #ff5864;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .redeem-button:hover {
+      background-color: #e74c57;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 12px;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>Auguri Bucchina</h1>
-  <iframe width="560" height="315" 
-          src="https://www.youtube.com/watch?v=J8Iocv32__o" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="autoplay; encrypted-media" 
-          allowfullscreen>
-  </iframe>
+  <div class="header">Tinder</div>
+  <div class="profile-pic"></div>
+  <div class="message">🎁 You have a special gift waiting for you!</div>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="redeem-button">Redeem Your Gift</a>
+  <div class="footer">© 2024 Tinder. All rights reserved.</div>
 </body>
 </html>
-
-
-
-
